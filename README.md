@@ -64,8 +64,8 @@
         }
     </script>
     <img src="https://img5.lalafo.com/i/posters/api/b3/09/96/8b3342a4ea85af14b775c85842.jpeg.jpg" alt="Описание изображения">
-<img src="https://i.ytimg.com/vi/LRaLsVDTh8U/hqdefault.jpg.jpg" alt="Описание изображения">
-<img src="https://sun9-14.userapi.com/c9375/g18539923/a_3ea5be04.jpg.jpg" alt="Описание изображения">
-<img src="https://www.sostav.ru/articles/rus/2010/28.06/news/images/Baltika-3_Outdoor_m.jpg.jpg" alt="Описание изображения">
+    <img src="https://i.ytimg.com/vi/LRaLsVDTh8U/hqdefault.jpg.jpg" alt="Описание изображения">
+    <img src="https://sun9-14.userapi.com/c9375/g18539923/a_3ea5be04.jpg.jpg" alt="Описание изображения">
+     <img src="https://www.sostav.ru/articles/rus/2010/28.06/news/images/Baltika-3_Outdoor_m.jpg.jpg" alt="Описание изображения">
     <p>&copy; 2024 Разработчик  Dylan9332789Z Все права защищены. | <span id="companyLink"></span></p>
     
