@@ -100,11 +100,6 @@
     
     <iframe id="websiteFrame" frameborder="0"></iframe>
 
-    <h2>Реклама</h2>
-    <div id="advertisement">
-        <!-- Ваш код или содержимое рекламы -->
-        <img src="advertisement_image.jpg" alt="Реклама">
-    </div>
 
     <script>
         function openWebsite() {
