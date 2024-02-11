@@ -106,24 +106,6 @@
         <img src="advertisement_image.jpg" alt="Реклама">
     </div>
 
-    <h2>Видео</h2>
-    <input type="url" id="videoInput" placeholder="Введите ссылку на видео" onkeypress="handleVideoKeyPress(event)" aria-labelledby="videoError">
-    <button onclick="pasteFromClipboard('videoInput')" aria-label="Вставить">Вставить</button>
-    <button onclick="clearInput('videoInput')" aria-label="Очистить">Очистить</button>
-    <button onclick="showVideo()" aria-label="Показать видео">Показать видео</button>
-
-    <div id="videoContainer"></div>
-    <div id="videoError" class="error" role="alert" aria-live="polite"></div>
-
-    <div class="controls">
-        <button onclick="playVideo()" aria-label="Воспроизвести">Воспроизвести</button>
-        <button onclick="pauseVideo()" aria-label="Пауза">Пауза</button>
-        <button onclick="stopVideo()" aria-label="Стоп">Стоп</button>
-        <label for="seekInput">Перемотка (в секундах):</label>
-        <input type="number" id="seekInput" placeholder="Введите время">
-        <button onclick="seekVideo()" aria-label="Перемотать">Перемотать</button>
-    </div>
-
     <script>
         function openWebsite() {
             var websiteUrl = document.getElementById('websiteInput').value;
