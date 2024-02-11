@@ -1,5 +1,7 @@
 
 
+<!DOCTYPE html>
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -81,6 +83,9 @@
             color: red;
             font-weight: bold;
         }
+        .controls {
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
@@ -95,7 +100,11 @@
     
     <iframe id="websiteFrame" frameborder="0"></iframe>
 
-    
+    <h2>Реклама</h2>
+    <div id="advertisement">
+        <!-- Ваш код или содержимое рекламы -->
+        <img src="advertisement_image.jpg" alt="Реклама">
+    </div>
 
     <h2>Видео</h2>
     <input type="url" id="videoInput" placeholder="Введите ссылку на видео" onkeypress="handleVideoKeyPress(event)" aria-labelledby="videoError">
@@ -105,6 +114,15 @@
 
     <div id="videoContainer"></div>
     <div id="videoError" class="error" role="alert" aria-live="polite"></div>
+
+    <div class="controls">
+        <button onclick="playVideo()" aria-label="Воспроизвести">Воспроизвести</button>
+        <button onclick="pauseVideo()" aria-label="Пауза">Пауза</button>
+        <button onclick="stopVideo()" aria-label="Стоп">Стоп</button>
+        <label for="seekInput">Перемотка (в секундах):</label>
+        <input type="number" id="seekInput" placeholder="Введите время">
+        <button onclick="seekVideo()" aria-label="Перемотать">Перемотать</button>
+    </div>
 
     <script>
         function openWebsite() {
@@ -134,12 +152,6 @@
             inputElement.value = '';
         }
 
-        function handleKeyPress(event) {
-            if (event.key === 'Enter') {
-                openWebsite();
-            }
-        }
-
         function showVideo() {
             var videoUrl = document.getElementById('videoInput').value;
             var videoContainer = document.getElementById('videoContainer');
@@ -154,6 +166,7 @@
                 video.width = "100%";
                 video.height = "auto";
                 video.controls = true;
+                video.id = "mainVideo";
 
                 // Создаем источник видео
                 var source = document.createElement('source');
@@ -177,6 +190,36 @@
                 showVideo();
             }
         }
+
+        function playVideo() {
+            var video = document.getElementById('mainVideo');
+            if (video) {
+                video.play();
+            }
+        }
+
+        function pauseVideo() {
+            var video = document.getElementById('mainVideo');
+            if (video) {
+                video.pause();
+            }
+        }
+
+        function stopVideo() {
+            var video = document.getElementById('mainVideo');
+            if (video) {
+                video.pause();
+                video.currentTime = 0;
+            }
+        }
+
+        function seekVideo() {
+            var video = document.getElementById('mainVideo');
+            var seekInput = document.getElementById('seekInput');
+            if (video && seekInput.value.trim() !== '') {
+                video.currentTime = parseFloat(seekInput.value);
+            }
+        }
     </script>
 
     <footer>
@@ -185,3 +228,4 @@
     </footer>
 
 </body>
+</html>
